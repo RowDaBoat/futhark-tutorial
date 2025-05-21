@@ -167,7 +167,7 @@ importc:
 
 The `importc` block now has an `outputPath` declaration, which tells **Futhark** to generate a Nim file with the binding code at the specified path.
 
-> **Note:** the Nim files in the `gen` directory are not compiled, they are only used to generate the binding code.
+> **Note:** the Nim files in the `gen` directory will not be linked into our main binary, they will only be used to generate the binding code.
 
 
 ### Update `salute.nim`
