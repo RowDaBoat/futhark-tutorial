@@ -128,7 +128,9 @@ Now to tell Nim to link against our library, change the compile pragma:
 {.passL: "csalute/libhello.a".}
 ```
 
-> **Note:** Nim devs usually move compiler/linker pragmas to a `compile.nim` file and then regularly import it. This has the advantage of keeping the main code clean while not complicating the `.nimble` file.
+> **Note:** The compiler/linker pragmas can be moved to a `compile.nim` file and then import it. This has the advantage of keeping the main code clean while not complicating the `.nimble` file with build instructions specific to each module of your project.
+
+> **Note:** These steps work well for simple C projects, but building a library is usually not straightforward, it's always a good idea to know how to do so _before_ trying to integrate it into your Nim project using **Futhark**.
 
 
 ## Creating a wrapper
@@ -193,6 +195,6 @@ before build:
 
 - The `futharkRebuild` flag rebuilds the binding code when changes are made to the `importc` block.
 - The `opirRebuild` flag rebuilds the binding code when the C code changes.
-- We also remove the built generator, it's not needed after the binding code is generated. If we don't remove it, the bindings are usually not rebuilt.
+- Also remove the built generator, it's not needed after the binding code is generated. If it's not removed, the bindings are usually not rebuilt.
 
 Run `nimble build && ./bin/salute` to test the wrapper.
