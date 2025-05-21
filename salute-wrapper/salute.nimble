@@ -16,5 +16,5 @@ requires "futhark >= 0.15.0"
 # Tasks
 before build:
   exec "cd csalute && ./build.sh"
-  exec "nim c -r -d:futharkRebuild -d:opirRebuild gen/generator.nim"
+  selfExec "c -r -d:futharkRebuild -d:opirRebuild gen/generator.nim"
   exec "rm gen/generator"
