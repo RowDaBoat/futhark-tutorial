@@ -1,0 +1,1 @@
+{.passL: "csalute/libhello.a".}
