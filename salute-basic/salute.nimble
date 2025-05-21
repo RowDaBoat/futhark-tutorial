@@ -1,6 +1,6 @@
 version       = "0.0.1"
 author        = "RowDaBoat"
-description   = "Nim bindings for shaderc"
+description   = "Salute Basic"
 license       = "ISC"
 
 bin           = @["salute"]

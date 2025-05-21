@@ -1,8 +1,7 @@
 # Package
 version       = "0.0.1"
 author        = "RowDaBoat"
-description   = "Nim bindings for shaderc"
-license       = "ISC"
+description   = "Salute Wrapper"
 
 # Project Setup
 bin           = @["salute"]
