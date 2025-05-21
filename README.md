@@ -135,7 +135,9 @@ Now to tell Nim to link against our library, change the compile pragma:
 
 ## Creating a wrapper
 
-So far, installing **Futhark** and declaring a dependency with it in our `.nimble` file is required for using our C library in Nim. However it's possible to generate a wrapper so that this is no longer needed, this is great since **Futhark**'s installation process is not trivial.
+If you just want to import a C library into your project, using **Futhark**'s `importc` is more than enough. However, this requires declaring a dependency with **Futhark** in our `.nimble` file and, more importantly, installing **Futhark** for anyone using our codebase.
+
+It is possible to generate a wrapper so that these two requirements are no longer needed, this is great since **Futhark**'s installation process is not trivial.
 
 
 ### Create the generator
