@@ -37,7 +37,7 @@ Let's create basic C code to import:
 
 void hello(char * name)
 {
-    csalute_printf("Hello %s from C!\n", name);
+    csalute_hello("Hello %s from C!\n", name);
 }
 ```
 
